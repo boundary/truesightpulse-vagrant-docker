@@ -17,9 +17,9 @@ Prior to installation you need to obtain in your Boundary API Token.
 $ git clone https://github.com/boundary/truesightpulse-vagrant-docker
 ```
 
-2. Start the virtual machine using your TrueSight Pulse API Token and Docker Version (optional):
+2. Start the virtual machine using your TrueSight Pulse API Token:
 ```bash
-$ API_TOKEN=<TrueSight Pulse API Token> DOCKER_VERSION=<latest (default)> vagrant up <virtual machine name>
+$ API_TOKEN=<TrueSight Pulse API Token> vagrant up <virtual machine name>
 ```
 NOTE: Run `vagrant status` to list the name of the virtual machines.
 

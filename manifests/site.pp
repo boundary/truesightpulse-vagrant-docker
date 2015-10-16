@@ -61,7 +61,6 @@ node /^centos-7-0/ {
   class { 'docker':
     docker_users => ['vagrant'],
     tcp_bind => 'tcp://127.0.0.1:2375',
-    version => $::docker_version,
   }
 
   docker::image { 'ubuntu':
@@ -98,7 +97,6 @@ node /^centos/ {
   class { 'docker':
     docker_users => ['vagrant'],
     tcp_bind => 'tcp://127.0.0.1:2375',
-    version => $::docker_version,
   }
 
   docker::image { 'ubuntu':
