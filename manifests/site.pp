@@ -5,6 +5,10 @@ Package {
 
 node /ubuntu/ {
 
+  host { 'localhost':
+    ip => '127.0.0.1',
+  }  
+
   file { 'bash_profile':
     path    => '/home/vagrant/.bash_profile',
     ensure  => file,

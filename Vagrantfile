@@ -53,7 +53,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.vm.box = "puppetlabs/ubuntu-12.04-64-puppet"
     v.vm.box_version = "1.0.1"
     v.vm.hostname = "ubuntu-12-04"
-    v.vm.provision "shell", inline: "sed -i 's/127.0.1.1/127.0.0.1/' /etc/hosts"
     
     # Needed to override to change the default outside-in ordering.
     config.vm.provision "puppet" do |puppet|
@@ -72,7 +71,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # fix box_version until Vagrant support newer versions of puppet.
     v.vm.box_version = "1.0.1"
     v.vm.hostname = "ubuntu-14-04"
-    v.vm.provision "shell", inline: "sed -i 's/127.0.1.1/127.0.0.1/' /etc/hosts"
     
     # Needed to override to change the default outside-in ordering.
     config.vm.provision "puppet" do |puppet|
