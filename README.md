@@ -1,4 +1,5 @@
-# TrueSight Pulse Vagrant Docker 
+TrueSight Pulse Vagrant Docker
+--------------------------------
 
 Configures a virtual machine with a Docker daemon running at localhost:2375 for testing TrueSight Pulse Plugin for Docker.
 
@@ -13,17 +14,26 @@ Configures a virtual machine with a Docker daemon running at localhost:2375 for 
 Prior to installation you need to obtain in your Boundary API Token.
 
 1. Clone the GitHub Repository:
-```bash
-$ git clone https://github.com/boundary/truesightpulse-vagrant-docker
-```
+
+     ```bash
+     $ git clone https://github.com/boundary/truesightpulse-vagrant-docker
+     ```
 
 2. Start the virtual machine using your TrueSight Pulse API Token:
-```bash
-$ API_TOKEN=<TrueSight Pulse API Token> vagrant up <virtual machine name>
-```
-NOTE: Run `vagrant status` to list the name of the virtual machines.
+
+    ```bash
+     $ API_TOKEN=<TrueSight Pulse API Token> vagrant up <virtual machine name>
+    ```
+    NOTE: Run `vagrant status` to list the name of the virtual machines.
+
+    Optionally provide the version of docker you want to install:
+
+    ```bash
+    $ API_TOKEN=<TrueSight Pulse API Token> DOCKER_VERSION=<docker version> vagrant up <virtual machine name>
+    ```
 
 3. Login to the virtual machine
-```bash
-$ vagrant ssh <virtual machine name>
-```
+
+    ```bash
+    $ vagrant ssh <virtual machine name>
+    ```
