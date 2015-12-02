@@ -33,7 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.manifest_file  = "site.pp"
     puppet.facter = {
       "api_token" => ENV["API_TOKEN"],
-      "docker_version" => ENV["DOCKER_VERSION"] ||= "latests"
+      "docker_version" => ENV["DOCKER_VERSION"] || :latest
     }
   end
 
@@ -60,7 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       puppet.manifest_file  = "site.pp"
       puppet.facter = {
         "api_token" => ENV["API_TOKEN"],
-        "docker_version" => ENV["DOCKER_VERSION"] ||= "latest"
+        "docker_version" => ENV["DOCKER_VERSION"] || :latest
       }
     end
 
@@ -78,11 +78,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       puppet.manifest_file  = "site.pp"
       puppet.facter = {
         "api_token" => ENV["API_TOKEN"],
-        # If the environment variable is not set than default to current
-        # version at the time of this writing it is 1.7.1
-        # NOTE: The docker puppet indicates you can use latest to the
-        # most up to date but installation fails
-        "docker_version" => ENV["DOCKER_VERSION"] ||= "1.7.1"
+        # If the environment variable is not set than default to latest
+        "docker_version" => ENV["DOCKER_VERSION"] || :latest
       }
     end
   end
